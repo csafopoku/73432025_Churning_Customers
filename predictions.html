@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Churn Prediction App - Predictions</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Churn Prediction Results</h1>
+        
+        <div class="result">
+            <h2>Prediction:</h2>
+            <p>The predicted churn probability is: {{ prediction }}</p>
+            
+            <!-- You can add more information or formatting based on your model output -->
+        </div>
+        
+        <!-- Add a link to go back to the input form -->
+        <p><a href="{{ url_for('home') }}">Go back to the input form</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" href="/Users/charlesopokuamankwah/Desktop/Intro To AI/HWs/design.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Churn Prediction</h1>
+
+        <div class="result">
+            {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+            <p>Confidence: {{ confidence }}</p>
+            {% endif %}
+        </div>
+
+        <form method="POST">
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="gender">Gender</label>
+                    <input type="text" name="gender" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="SeniorCitizen">Senior Citizen</label>
+                    <input type="text" name="SeniorCitizen" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="Partner">Partner</label>
+                    <input type="text" name="Partner" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="tenure">Tenure</label>
+                    <input type="text" name="tenure" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="MultipleLines">Multiple Lines</label>
+                    <input type="text" name="MultipleLines" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="InternetService">Internet Service</label>
+                    <input type="text" name="InternetService" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="OnlineSecurity">Online Security</label>
+                    <input type="text" name="OnlineSecurity" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="OnlineBackup">Online Backup</label>
+                    <input type="text" name="OnlineBackup" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="DeviceProtection">Device Protection</label>
+                    <input type="text" name="DeviceProtection" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="TechSupport">Tech Support</label>
+                    <input type="text" name="TechSupport" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="StreamingMovies">Streaming Movies</label>
+                    <input type="text" name="StreamingMovies" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="Contract">Contract</label>
+                    <input type="text" name="Contract" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="PaperlessBilling">Paperless Billing</label>
+                    <input type="text" name="PaperlessBilling" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="PaymentMethod">Payment Method</label>
+                    <input type="text" name="PaymentMethod" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="MonthlyCharges">Monthly Charges</label>
+                    <input type="text" name="MonthlyCharges" required>
+                </div>
+            </div>
+
+            <div class="submit-container">
+                <button type="submit">Predict</button>
+            </div>
+        </form>
+
+        {% if error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
